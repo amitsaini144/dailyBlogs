@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "Post" ADD COLUMN     "Date" TEXT NOT NULL DEFAULT '01 Jan 2024';
