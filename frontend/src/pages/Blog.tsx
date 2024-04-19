@@ -6,7 +6,6 @@ import { useBlog } from "../hooks";
 import { useNavigate, useParams } from "react-router-dom";
 import { Spotlight } from "@/components/ui/Spotlight";
 
-// atomFamilies/selectorFamilies
 export const Blog = () => {
     const navigate = useNavigate();
     const { id } = useParams();

@@ -7,7 +7,6 @@ import { CreatePostType } from "@amitsaini144/common-medium";
 import { TextEditor } from "@/components/TextEditor";
 import { toast, Toaster } from "sonner"
 
-
 const getCurrentDate = (): string => {
     const dateObj = new Date();
     const year = dateObj.getFullYear();
