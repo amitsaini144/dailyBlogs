@@ -122,7 +122,7 @@ postRouter.get('/bulk', async (c) => {
 
     try {
         const posts = await prisma.post.findMany({
-            take: 10,
+            take: 15,
             skip: 0,
             select: {
                 Date: true,

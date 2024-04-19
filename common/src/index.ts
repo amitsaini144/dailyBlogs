@@ -12,7 +12,7 @@ export const signinInput = z.object({
 })
 
 export const createPostInput = z.object({
-    title: z.string().min(2),
+    title: z.string().min(1).max(60),
     content: z.string().optional(),
     Date: z.string()
 })

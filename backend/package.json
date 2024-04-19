@@ -4,7 +4,7 @@
     "deploy": "wrangler deploy --minify src/index.ts"
   },
   "dependencies": {
-    "@amitsaini144/common-medium": "^1.0.4",
+    "@amitsaini144/common-medium": "^1.0.5",
     "@prisma/client": "^5.12.1",
     "@prisma/extension-accelerate": "^1.0.0",
     "bcrypt-ts": "^5.0.2",
