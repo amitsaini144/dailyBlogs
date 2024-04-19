@@ -54,7 +54,7 @@ export default function Signup() {
             
                 <div className="max-w-md w-full mx-auto rounded-xl md:rounded-2xl p-4 md:p-8 pb-1 md:pb-1 shadow-input bg-white dark:bg-black">
                     <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
-                        Welcome to Medium
+                        Welcome to Daily Blogs
                     </h2>
                     <p className="text-neutral-600 text-sm max-w-sm mt-2 mr-10 dark:text-neutral-300">
                         Enter your information to create an account
