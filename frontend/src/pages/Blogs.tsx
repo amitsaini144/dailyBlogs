@@ -41,7 +41,7 @@ export const Blogs = () => {
                         <BlogSkeleton />
                     </div>
                 ) : blogs.length > 0 ? (
-                    <div className="flex justify-center items-center flex-col mt-32">
+                    <div className="grid md:grid-cols-2 mt-32">
                         {blogs.map(blog => (
                             <BlogCard
                                 key={blog.id}

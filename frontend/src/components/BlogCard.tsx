@@ -14,8 +14,8 @@ export const BlogCard = ({
     content,
     publishedDate
 }: BlogCardProps) => {
-    return <Link to={`/blog/${id}`} className="w-full px-5 md:w-1/2 md:px-0">
-        <div className="p-4 border border-slate-200 pb-4 cursor-pointer mb-10 backdrop-blur-3xl backdrop-brightness-150 rounded-md ">
+    return <Link to={`/blog/${id}`} className="px-5 md:px-0 md:mx-4">
+        <div className="p-4 border border-slate-200 pb-4 cursor-pointer mb-10 backdrop-blur-3xl backdrop-brightness-150 rounded-md">
             <div className="flex">
                 <Avatar name={authorName} />
                 <div className="font-extralight pl-2 text-sm flex justify-center flex-col text-white">{authorName}</div>
@@ -30,7 +30,7 @@ export const BlogCard = ({
                 {title}
             </div>
             <div className="text-md font-thin text-white">
-                {content.slice(0, 100) + "..."}
+                {content.slice(0, 50) + "..."}
             </div>
             <div className="text-zinc-400 text-sm font-thin pt-4">
                 {`${Math.ceil(content.length / 400)} minute(s) read`}
