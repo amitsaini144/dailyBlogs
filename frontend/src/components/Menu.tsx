@@ -32,7 +32,7 @@ export default function Menu() {
             navigate("/signin")
           }}
         >Logout</button></DropdownMenuItem>
-        
+
       </DropdownMenuContent>
     </DropdownMenu>
 

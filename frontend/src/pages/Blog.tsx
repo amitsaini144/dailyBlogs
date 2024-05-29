@@ -22,7 +22,7 @@ export const Blog = () => {
         else {
             setBuffer(false)
         }
-    }, [])
+    }, [navigate])
     if (buffer) {
         return <div></div>
     }

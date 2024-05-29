@@ -19,7 +19,7 @@ export const Blogs = () => {
         } else {
             setBuffer(false)
         }
-    }, [])
+    }, [navigate])
     if (buffer) {
         return <div></div>
     }

@@ -37,7 +37,7 @@ export const Publish = () => {
         } else {
             setBuffer(false)
         }
-    }, [])
+    }, [navigate])
     if (buffer) {
         return <div></div>
     }
