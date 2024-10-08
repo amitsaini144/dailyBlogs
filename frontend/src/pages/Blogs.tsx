@@ -21,7 +21,7 @@ export const Blogs = () => {
         }
     }, [navigate])
     if (buffer) {
-        return <div></div>
+        return <div className="bg-black h-screen w-screen"></div>
     }
 
     return (
@@ -33,7 +33,8 @@ export const Blogs = () => {
             <div className="z-20 w-full">
                 <Appbar />
                 {loading ? (
-                    <div className="flex justify-center flex-col items-center mt-32">
+                    <div className="grid md:grid-cols-2 mt-32">
+                        <BlogSkeleton />
                         <BlogSkeleton />
                         <BlogSkeleton />
                         <BlogSkeleton />
@@ -63,6 +64,4 @@ export const Blogs = () => {
             </div>
         </div>
     );
-
-
 }

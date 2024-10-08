@@ -42,7 +42,7 @@ export const FullBlog = ({ blog }: { blog: Blog }) => {
                                             {blog.author.name || "Anonymous"}
                                         </div>
                                         <div className="pt-2 text-zinc-300 w-96 lg:w-full">
-                                            Random catch phrase about the author's ability to grab the user's attention
+                                        Your words have the power to inspire, educate, and connect. Each blog post is an opportunity to share your unique voice and ideas with the world—so write boldly, passionately, and consistently!
                                         </div>
                                     </div>
                                 </div>

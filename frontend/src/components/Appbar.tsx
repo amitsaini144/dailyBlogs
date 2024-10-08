@@ -1,5 +1,6 @@
 import Menu from "./Menu"
 import { Link, useLocation } from "react-router-dom"
+import { motion } from "framer-motion";
 
 const hiddenPaths = ['/publish'];
 
@@ -7,7 +8,11 @@ export const Appbar = () => {
     const location = useLocation();
     const isButtonHidden = hiddenPaths.includes(location.pathname);
 
-    return <div className="fixed top-0 left-0 right-0 z-50 border-b flex justify-between px-10 py-2 mb-10 backdrop-blur-lg">
+    return <motion.div
+        initial={{ y: "-100%" }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.5, ease:"easeInOut"}}
+        className="fixed top-0 left-0 right-0 z-50 border-b flex justify-between px-10 py-2 mb-10 backdrop-blur-lg">
         <Link to={'/blogs'} className="flex flex-col justify-center cursor-pointer text-white text-xl">
             Daily Blogs
         </Link>
@@ -19,5 +24,5 @@ export const Appbar = () => {
             }
             <Menu />
         </div>
-    </div>
+    </motion.div>
 }

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion"
 interface BlogCardProps {
     authorName: string;
     title: string;
@@ -15,7 +16,15 @@ export const BlogCard = ({
     publishedDate
 }: BlogCardProps) => {
     return <Link to={`/blog/${id}`} className="px-5 md:px-0 md:mx-4">
-        <div className="p-4 border border-slate-200 pb-4 cursor-pointer mb-10 backdrop-blur-3xl backdrop-brightness-150 rounded-md">
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            whileHover={{ scale: 1.02 }}
+            transition={{
+                opacity: { duration: 1 },
+                scale: { duration: 0.1 },
+            }}
+            className="p-4 border border-slate-200 pb-4 cursor-pointer mb-10 backdrop-blur-3xl backdrop-brightness-150 rounded-md">
             <div className="flex">
                 <Avatar name={authorName} />
                 <div className="font-extralight pl-2 text-sm flex justify-center flex-col text-white">{authorName}</div>
@@ -35,7 +44,7 @@ export const BlogCard = ({
             <div className="text-zinc-400 text-sm font-thin pt-4">
                 {`${Math.ceil(content.length / 400)} minute(s) read`}
             </div>
-        </div>
+        </motion.div>
     </Link>
 }
 
@@ -47,8 +56,8 @@ export function Circle() {
 
 export function Avatar({ name, size = "small" }: { name: string, size?: "small" | "big" }) {
     return <div className={`relative inline-flex items-center justify-center overflow-hidden bg-zinc-500 rounded-full ${size === "small" ? "w-6 h-6" : "w-10 h-10"}`}>
-    <span className={`${size === "small" ? "text-xs" : "text-md"} font-extralight text-white dark:text-gray-300`}>
-        {name[0]}
-    </span>
-</div>
+        <span className={`${size === "small" ? "text-xs" : "text-md"} font-extralight text-white dark:text-gray-300`}>
+            {name[0]}
+        </span>
+    </div>
 }
