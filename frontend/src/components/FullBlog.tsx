@@ -17,7 +17,7 @@ export const FullBlog = ({ blog }: { blog: Blog }) => {
                     <div className="grid grid-cols-12 px-10 w-full max-w-screen-xl pt-12 gap-y-20 gap-x-20 h-fit mb-20">
                         <div className="lg:col-span-8 col-span-12">
                             <div>
-                                <div className="text-5xl font-extrabold text-white w-96 lg:w-full ">
+                                <div className="text-5xl font-extrabold text-white w-2/3 lg:w-full ">
                                     {blog.title}
                                 </div>
                                 <div className="text-zinc-400 pt-2">
@@ -35,14 +35,11 @@ export const FullBlog = ({ blog }: { blog: Blog }) => {
                                 </div>
                                 <div className="flex w-full">
                                     <div className="pr-4 flex flex-col justify-center">
-                                        <Avatar size="big" name={blog.author.name || "Anonymous"} />
+                                        <Avatar size="small" name={blog.author.name || "Anonymous"} />
                                     </div>
                                     <div>
                                         <div className="text-xl font-bold text-white">
                                             {blog.author.name || "Anonymous"}
-                                        </div>
-                                        <div className="pt-2 text-zinc-300 w-96 lg:w-full">
-                                        Your words have the power to inspire, educate, and connect. Each blog post is an opportunity to share your unique voice and ideas with the world—so write boldly, passionately, and consistently!
                                         </div>
                                     </div>
                                 </div>

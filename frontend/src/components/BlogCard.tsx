@@ -17,14 +17,9 @@ export const BlogCard = ({
 }: BlogCardProps) => {
     return <Link to={`/blog/${id}`} className="px-5 md:px-0 md:mx-4">
         <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
             whileHover={{ scale: 1.02 }}
-            transition={{
-                opacity: { duration: 1 },
-                scale: { duration: 0.1 },
-            }}
-            className="p-4 border border-slate-200 pb-4 cursor-pointer mb-10 backdrop-blur-3xl backdrop-brightness-150 rounded-md">
+            transition={{ duration: 0.1 }}
+            className="flex flex-col p-4 border border-slate-200 pb-4 cursor-pointer mb-10 backdrop-blur-3xl backdrop-brightness-150 rounded-md min-w-[400px]">
             <div className="flex">
                 <Avatar name={authorName} />
                 <div className="font-extralight pl-2 text-sm flex justify-center flex-col text-white">{authorName}</div>
